@@ -6,4 +6,6 @@ class AppTheme {
 
   static const textDark = Color.fromRGBO(31, 19, 56, 1);
   static const textLight = Color.fromRGBO(255, 255, 255, 1);
+
+  static const background = Color.fromRGBO(242, 246, 255, 1);
 }
