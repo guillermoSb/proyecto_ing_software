@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_app/themes/light_theme.dart';
 
 class PageTitleWidget extends StatelessWidget {
   final String title;
@@ -13,7 +14,10 @@ class PageTitleWidget extends StatelessWidget {
       children: [
         Padding(
             padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
-            child: Text(title)),
+            child: Text(
+              title,
+              style: TextStyle(color: AppTheme.textDark, fontSize: 47),
+            )),
       ],
     );
   }

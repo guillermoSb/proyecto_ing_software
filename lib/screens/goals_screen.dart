@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:health_app/widgets/pageTitle_widget.dart';
 
 class GoalsScreen extends StatelessWidget {
   const GoalsScreen({Key? key}) : super(key: key);
@@ -7,7 +8,8 @@ class GoalsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      child: Center(child: Text('Goals')),
-    );
+        child: Column(
+      children: const [PageTitleWidget('Metas')],
+    ));
   }
 }
