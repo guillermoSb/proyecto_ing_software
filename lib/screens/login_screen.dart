@@ -15,20 +15,24 @@ class LoginScreen extends StatelessWidget {
           children: [
             const CupertinoTextField(placeholder: 'Email'),
             const SizedBox(height: 18),
-            const CupertinoTextField(placeholder: 'Password', obscureText: true, enableSuggestions: false, autocorrect: false,),
+            const CupertinoTextField(
+              placeholder: 'Password',
+              obscureText: true,
+              enableSuggestions: false,
+              autocorrect: false,
+            ),
             const SizedBox(height: 18),
-            CupertinoButton.filled(child: Text('Login'), onPressed: (){
-              Navigator.pushReplacement(
-                context, 
-                CupertinoPageRoute(
-                  builder: (context) => const NavigationScreen()
-                  )
-                );
-            })
+            CupertinoButton.filled(
+                child: Text('Entrar'),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const NavigationScreen()));
+                })
           ],
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
-          
         ),
       ),
     );

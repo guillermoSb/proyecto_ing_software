@@ -11,30 +11,34 @@ class NavigationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
-      tabBar: CupertinoTabBar(
-        onTap: (index) {
-          print('Clicked on tab $index');
-        },
-        items: [
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.flag), label: 'Metas'),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart_circle), label: 'Salud'),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.calendar), label: 'Calendario'),
-        ],
-      ), 
-      tabBuilder: (context, index) {
-        switch (index) {
-          case 0:
-            return HomeScreen();
-          case 1:
-            return GoalsScreen();
-          case 2:
-            return HealthScreen();
-          case 3:
-            return CalendarScreen();
-          default:
-            return Container();
-        }
-      });
+        tabBar: CupertinoTabBar(
+          onTap: (index) {
+            print('Clicked on tab $index');
+          },
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.flag), label: 'Metas'),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.heart_circle), label: 'Salud'),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.calendar), label: 'Calendario'),
+          ],
+        ),
+        tabBuilder: (context, index) {
+          switch (index) {
+            case 0:
+              return const SafeArea(child: HomeScreen());
+            case 1:
+              return const SafeArea(child: GoalsScreen());
+            case 2:
+              return const SafeArea(child: HealthScreen());
+            case 3:
+              return const SafeArea(child: CalendarScreen());
+            default:
+              return SafeArea(child: Container());
+          }
+        });
   }
 }

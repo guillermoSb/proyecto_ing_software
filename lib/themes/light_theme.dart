@@ -13,6 +13,6 @@ class AppTheme {
   static const CupertinoThemeData lightTheme = CupertinoThemeData(
       barBackgroundColor: secondary,
       primaryColor: primary,
-      primaryContrastingColor: secondary,
+      primaryContrastingColor: textLight,
       scaffoldBackgroundColor: background);
 }
