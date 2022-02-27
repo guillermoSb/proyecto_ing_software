@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CupertinoApp(
       title: 'Cupertino App',
-      home: LoginScreen()
+      home: LoginScreen(),
+      theme: AppTheme.lightTheme,
     );
   }
 }
