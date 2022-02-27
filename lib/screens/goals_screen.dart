@@ -9,7 +9,14 @@ class GoalsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         child: Column(
-      children: const [PageTitleWidget('Metas')],
+      children: [
+        // ignore: prefer_const_constructors
+        PageTitleWidget('Metas'),
+        Padding(
+          padding: EdgeInsets.all(8),
+          child: Image.asset('assets/images/Group 16.png'),
+        )
+      ],
     ));
   }
 }
