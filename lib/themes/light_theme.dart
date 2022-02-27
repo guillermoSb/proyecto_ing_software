@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -8,4 +9,10 @@ class AppTheme {
   static const textLight = Color.fromRGBO(255, 255, 255, 1);
 
   static const background = Color.fromRGBO(242, 246, 255, 1);
+
+  static const CupertinoThemeData lightTheme = CupertinoThemeData(
+      barBackgroundColor: secondary,
+      primaryColor: primary,
+      primaryContrastingColor: secondary,
+      scaffoldBackgroundColor: background);
 }
