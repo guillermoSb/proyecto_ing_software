@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
                   CupertinoButton.filled(
-                      child: Text('Entrar'),
+                      child: const Text('Entrar'),
                       onPressed: () {
                         Navigator.pushReplacement(
                             context,
@@ -42,6 +42,14 @@ class LoginScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
               ),
             ),
+            Expanded(
+              child: Align(
+                child: Transform.translate(
+                    offset: const Offset(-20, 50),
+                    child: Image.asset('assets/images/blob01.png')),
+                alignment: Alignment.bottomLeft,
+              ),
+            )
           ],
         ),
       ),
