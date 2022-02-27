@@ -15,3 +15,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*class Todo {
+  String what;
+  bool done;
+  Todo(this.what) : done = false;
+}*/
