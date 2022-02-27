@@ -9,7 +9,21 @@ class HealthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         child: Column(
-      children: const [PageTitleWidget('Salud')],
+      children: [
+        PageTitleWidget('Salud'),
+        Padding(
+          padding: EdgeInsets.all(8),
+          child: Image.asset('assets/images/Frame 24.png'),
+        )
+        /*Expanded(
+          child: Align(
+            child: Transform.translate(
+                offset: const Offset(0, 0),
+                child: Image.asset('assets/images/Frame 24.png')),
+            alignment: Alignment.bottomLeft,
+          ),
+        )*/
+      ],
     ));
   }
 }
