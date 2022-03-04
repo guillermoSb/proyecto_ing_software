@@ -59,7 +59,7 @@ class ProgressWidget extends StatelessWidget {
             child: LinearProgressIndicator(
               value: progress,
               color: AppTheme.primary,
-              backgroundColor: AppTheme.secondary,
+              backgroundColor: AppTheme.secondary.withOpacity(0.5),
               minHeight: 20,
             ),
           ),
