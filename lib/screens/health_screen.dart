@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:health_app/themes/light_theme.dart';
 import 'package:health_app/widgets/pageTitle_widget.dart';
 
 class HealthScreen extends StatelessWidget {
@@ -12,18 +13,52 @@ class HealthScreen extends StatelessWidget {
       children: [
         PageTitleWidget('Salud'),
         Padding(
-          padding: EdgeInsets.all(8),
-          child: Image.asset('assets/images/Frame 24.png'),
-        )
-        /*Expanded(
-          child: Align(
-            child: Transform.translate(
-                offset: const Offset(0, 0),
-                child: Image.asset('assets/images/Frame 24.png')),
-            alignment: Alignment.bottomLeft,
+          padding: EdgeInsets.all(24),
+          child: Column(
+            children: [
+              ProgressWidget("Ejercicio"),
+              SizedBox(
+                height: 24,
+              ),
+              ProgressWidget("Meditar")
+            ],
           ),
-        )*/
+        )
       ],
     ));
+  }
+}
+
+class ProgressWidget extends StatelessWidget {
+  final String title;
+  const ProgressWidget(
+    this.title, {
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [Text("$title"), Text("20/5 días")],
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Container(
+            child: const LinearProgressIndicator(
+              value: 0.4,
+              color: AppTheme.primary,
+              backgroundColor: AppTheme.secondary,
+              minHeight: 20,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
