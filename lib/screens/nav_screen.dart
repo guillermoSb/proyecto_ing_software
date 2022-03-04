@@ -21,9 +21,9 @@ class NavigationScreen extends StatelessWidget {
             BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.flag), label: 'Metas'),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.heart_circle), label: 'Salud'),
-            BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.calendar), label: 'Calendario'),
+                icon: Icon(CupertinoIcons.heart_circle), label: 'Salud')
+            // BottomNavigationBarItem(
+            //     icon: Icon(CupertinoIcons.calendar), label: 'Calendario'),
           ],
         ),
         tabBuilder: (context, index) {
