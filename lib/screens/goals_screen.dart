@@ -24,6 +24,8 @@ class GoalsScreen extends StatelessWidget {
                 GoalCheckListTile("Meditar"),
                 Divider(),
                 GoalCheckListTile("Medicinas"),
+                Divider(),
+                GoalCheckListTile("Limpieza Personal"),
                 Divider()
               ],
             ),
