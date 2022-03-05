@@ -24,7 +24,11 @@ class HealthScreen extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
-              ProgressWidget("Medicina Diaria", 0.1)
+              ProgressWidget("Medicina Diaria", 0.1),
+              SizedBox(
+                height: 24,
+              ),
+              ProgressWidget("Leer", 0.5)
             ],
           ),
         )
